@@ -1,0 +1,11 @@
+eureka.client.service-url.defaultZone=http://localhost:8761
+spring.application.name=gateway
+server.port=8093
+
+spring.cloud.gateway.routes[0].id=helloservice
+spring.cloud.gateway.routes[0].uri=lb://helloservice
+spring.cloud.gateway.routes[0].predicates[0]=path/service/*
+spring.cloud.gateway.routes[0].predicates[1]=path/service/status
+
+
+
